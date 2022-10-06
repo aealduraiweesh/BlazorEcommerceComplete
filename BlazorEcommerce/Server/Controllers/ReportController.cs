@@ -20,28 +20,28 @@ namespace BlazorEcommerce.Server.Controllers
 
         }
 
-        [HttpGet]
-        [Route(template:"GetReport")]
-        public IActionResult GetReport(int reportType)
-        {
+        //[HttpGet]
+        //[Route(template:"GetReport")]
+        //public IActionResult GetReport(int reportType)
+        //{
          
 
-            var dt = new DataTable();
-            dt = _productService.GetProductsAsync();
+        //    var dt = new DataTable();
+        //    dt = _productService.GetProductsAsync();
 
-            string mimeType = "";
-            int extenstion = 1;
-            var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\Report1.rdlc";
+        //    string mimeType = "";
+        //    int extenstion = 1;
+        //    var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\Report1.rdlc";
 
-            Dictionary<string, string> parameter = new Dictionary<string, string>();
-            parameter.Add("param","RDLC Report in Blazor Web Assembly");
-            LocalReport localReport = new LocalReport(path);
-            localReport.AddDataSource(dataSetName: "dsEmployee", dt);
+        //    Dictionary<string, string> parameter = new Dictionary<string, string>();
+        //    parameter.Add("param","RDLC Report in Blazor Web Assembly");
+        //    LocalReport localReport = new LocalReport(path);
+        //    localReport.AddDataSource(dataSetName: "dsEmployee", dt);
 
-            if(reportType == 1 )
-            {
+        //    if(reportType == 1 )
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
